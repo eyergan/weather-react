@@ -38,7 +38,7 @@ function App() {
             </div>
             <p className="codedBy">
               <a
-                href="https://github.com/eyergan/WeatherApp"
+                href="https://github.com/eyergan/weather-react"
                 target="_blank"
                 rel="noreferrer"
               >
