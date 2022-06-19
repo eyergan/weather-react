@@ -1,13 +1,95 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #f9f7fe;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  color: rgba(108, 219, 218, 0.7);
+  margin-top: 45px;
+  font-family: "Lato", sans-serif;
+}
+
+section {
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgb(65 50 100 / 8%);
+  background: white;
+}
+
+ul li img {
+  margin-left: 30px;
+}
+
+li {
+  list-style: none;
+}
+å p.card-text:first-letter {
+  text-transform: capitalize;
+}
+
+.week-title {
+  padding-left: 15px;
+  padding-top: 3px;
+}
+
+.week {
+  margin-top: 30px;
+  border: 0 px;
+  border-radius: 8px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  text-align: center;
+}
+
+.search-city {
+  margin-top: 50px;
+}
+
+.today {
+  margin-top: 25px;
+  border: 0 px;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgb(65 50 100 / 8%);
+}
+
+.codedBy {
+  font-size: small;
+}
+
+.btn {
+  margin-top: 5px;
+  background: rgba(145, 92, 145, 0.4);
+  border: 0px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgb(65 50 100 / 8%);
+}
+
+.btn:hover {
+  background-color: rgba(108, 219, 218, 0.7);
+  color: thistle;
+}
+
+.btn:focus {
+  background-color: rgba(108, 219, 218, 0.7);
+  color: thistle;
+}
+
+.tempF {
+  font-size: 30px;
+}
+
+.weather-forecast-temp {
+  font-weight: 600;
+}
+
+.weather-temp-max {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 30px;
+}
+
+.weather-temp-min {
+  font-size: 14px;
+  opacity: 0.5;
+  font-weight: 300;
+  padding-left: 30px;
 }
