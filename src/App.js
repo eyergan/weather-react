@@ -1,5 +1,5 @@
 import "./App.css";
-
+import FormattedDate from "./FormattedDate.js";
 import Forecast from "./Forecast.js";
 
 import axios from "axios";
@@ -14,7 +14,7 @@ function App(props) {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Sunday 06:00",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       city: response.data.name,
       description: response.data.weather[0].description,
@@ -71,7 +71,9 @@ function App(props) {
                 <div class="card-body">
                   <h5 class="card-title">Today</h5>
                   <h6 class="card-subtitle mb-2 text-muted" id="currentDate">
-                    <div>{weatherData.date}</div>
+                    <div>
+                      <FormattedDate date={weatherData.date} />
+                    </div>
                   </h6>
                   <p className="card-text">
                     <span className="tempF" id="tempCF">
