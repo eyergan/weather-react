@@ -44,8 +44,8 @@ export default function WeatherInfo(props) {
             {props.data.description}
           </p>
           <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-            alt="Clear"
+            src={props.data.iconUrl}
+            alt={props.data.description}
             id="icon"
           />
         </div>
