@@ -73,8 +73,12 @@ li {
   color: thistle;
 }
 
-.tempF {
+.temperature {
   font-size: 30px;
+}
+
+.units a {
+  text-decoration: none;
 }
 
 .weather-forecast-temp {
