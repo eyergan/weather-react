@@ -1,8 +1,5 @@
-import "./App.css";
-
-import Forecast from "./Forecast.js";
 import WeatherInfo from "./WeatherInfo";
-
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import { useState } from "react";
 
@@ -62,17 +59,7 @@ function App(props) {
                 </button>
               </form>
 
-              <div className="card week" id="forecast">
-                <h5 className="card-title week-title">Forecast</h5>
-                <ul className="list-group list-group-flush" id="forecastList">
-                  <Forecast day="mon" temp="80" />
-                  <Forecast day="tues" temp="70" />
-                  <Forecast day="wed" temp="75" />
-                  <Forecast day="thurs" temp="80" />
-                  <Forecast day="fri" temp="72" />
-                  <Forecast day="sat" temp="72" />
-                </ul>
-              </div>
+              <WeatherForecast />
               <p className="codedBy">
                 <a
                   href="https://github.com/eyergan/weather-react"
