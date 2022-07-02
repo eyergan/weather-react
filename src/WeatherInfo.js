@@ -8,14 +8,14 @@ export default function WeatherInfo(props) {
       <h1 id="headingPlace">{props.data.city}</h1>
       <hr />
       <div className="card today">
-        <div class="card-body">
-          <h5 class="card-title">Today</h5>
-          <h6 class="card-subtitle mb-2 text-muted" id="currentDate">
+        <div className="card-body">
+          <h5 className="card-title">Today</h5>
+          <h6 className="card-subtitle mb-2 text-muted" id="currentDate">
             <div>
               <FormattedDate date={props.data.date} />
             </div>
           </h6>
-          <p className="card-text">
+          <div className="card-text">
             <WeatherTemp celsius={props.data.temperature} />
             <br />
             <div>
@@ -32,7 +32,7 @@ export default function WeatherInfo(props) {
               </span>{" "}
               mph
             </div>
-          </p>
+          </div>
         </div>
       </div>
       <section>
