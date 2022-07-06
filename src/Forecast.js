@@ -3,13 +3,15 @@ import "./WeatherForecast.css";
 
 export default function Forecast(props) {
   function maxTemperature() {
-    let temperature = Math.round(props.data.temp.max * 9) / 5 + 32;
-    return `${temperature}`;
+    let temperature = (props.data.temp.max * 9) / 5 + 32;
+    let roundTemperature = Math.round(temperature);
+    return `${roundTemperature}`;
   }
 
   function minTermperature() {
-    let temperature = Math.round(props.data.temp.min * 9) / 5 + 32;
-    return `${temperature}`;
+    let temperature = (props.data.temp.min * 9) / 5 + 32;
+    let roundTemperature = Math.round(temperature);
+    return `${roundTemperature}`;
   }
 
   function day() {
@@ -25,7 +27,7 @@ export default function Forecast(props) {
   return (
     <li className="list-group-item weather-forecast-temp">
       <span className="forecast-list">{day()}</span>
-      <span>
+      <span className="forecast-list">
         <img src={imgUrl} alt="alt text" />
       </span>
       <span className="forecast-list">{maxTemperature()}°F</span>

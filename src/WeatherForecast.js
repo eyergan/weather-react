@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./WeatherForecast.css";
 import Forecast from "./Forecast";
+
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
@@ -17,6 +23,10 @@ export default function WeatherForecast(props) {
         <h5 className="card-title week-title">Forecast</h5>
         <ul className="list-group list-group-flush" id="forecastList">
           <Forecast data={forecast[0]} />
+          <Forecast data={forecast[1]} />
+          <Forecast data={forecast[2]} />
+          <Forecast data={forecast[3]} />
+          <Forecast data={forecast[4]} />
         </ul>
       </div>
     );
